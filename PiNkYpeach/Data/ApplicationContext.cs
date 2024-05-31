@@ -5,9 +5,9 @@ namespace PiNkYpeach.Web.Data
 {
     public class ApplicationContext : DbContext
     {
-        ApplicationContext (DbContextOptions<ApplicationContext> options) : base(options)
+        public ApplicationContext (DbContextOptions<ApplicationContext> options) : base(options)
         {
-
+             
         }
 
         public DbSet<User> Users { get; set; }
