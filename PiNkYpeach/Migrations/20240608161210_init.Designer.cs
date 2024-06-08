@@ -7,13 +7,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PiNkYpeach.Data;
 
-
 #nullable disable
 
-namespace PiNkYpeach.Web.Migrations
+namespace PiNkYpeach.Data.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20240531130955_init")]
+    [Migration("20240608161210_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +24,7 @@ namespace PiNkYpeach.Web.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("PiNkYpeach.Web.Data.Entities.User", b =>
+            modelBuilder.Entity("PiNkYpeach.Data.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()

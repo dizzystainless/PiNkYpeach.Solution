@@ -6,10 +6,9 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PiNkYpeach.Data;
 
-
 #nullable disable
 
-namespace PiNkYpeach.Web.Migrations
+namespace PiNkYpeach.Data.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
     partial class ApplicationContextModelSnapshot : ModelSnapshot
@@ -23,7 +22,7 @@ namespace PiNkYpeach.Web.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("PiNkYpeach.Web.Data.Entities.User", b =>
+            modelBuilder.Entity("PiNkYpeach.Data.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
