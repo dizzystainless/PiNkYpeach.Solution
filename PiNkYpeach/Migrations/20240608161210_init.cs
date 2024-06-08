@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace PiNkYpeach.Web.Migrations
+namespace PiNkYpeach.Data.Migrations
 {
     public partial class init : Migration
     {
