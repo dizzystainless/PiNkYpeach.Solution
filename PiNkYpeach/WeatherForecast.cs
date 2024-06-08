@@ -1,4 +1,4 @@
-namespace PiNkYpeach.Web.Data
+namespace PiNkYpeach.Data
 {
     public class WeatherForecast
     {

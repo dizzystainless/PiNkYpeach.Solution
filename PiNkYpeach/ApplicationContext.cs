@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PiNkYpeach.Web.Data.Entities;
+using PiNkYpeach.Data.Entities;
 
-namespace PiNkYpeach.Web.Data
+namespace PiNkYpeach.Data
 {
     public class ApplicationContext : DbContext
     {
-        public ApplicationContext (DbContextOptions<ApplicationContext> options) : base(options)
+        public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
         {
-             
+
         }
 
         public DbSet<User> Users { get; set; }

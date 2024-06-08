@@ -1,6 +1,6 @@
-﻿using PiNkYpeach.Web.Data.Entities;
+﻿using PiNkYpeach.Data.Entities;
 
-namespace PiNkYpeach.Web.Services.Interfaces
+namespace PiNkYpeach.Data.Services.Interfaces
 {
     public interface IUserService
     {

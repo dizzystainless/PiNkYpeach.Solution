@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using PiNkYpeach.Web.Data;
-using PiNkYpeach.Web.Services.Interfaces;
+using PiNkYpeach.Data;
+using PiNkYpeach.Data.Services.Interfaces;
 
-namespace PiNkYpeach.Web.Services
+namespace PiNkYpeach.Data.Services
 {
     public class UserService : IUserService
     {
