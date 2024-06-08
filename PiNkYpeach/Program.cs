@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using MudBlazor.Services;
-using PiNkYpeach.Web.Data;
-using PiNkYpeach.Web.Services;
-using PiNkYpeach.Web.Services.Interfaces;
+using PiNkYpeach.Data.Services;
+using PiNkYpeach.Data.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using PiNkYpeach.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
