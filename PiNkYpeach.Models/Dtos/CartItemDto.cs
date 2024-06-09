@@ -18,3 +18,4 @@ namespace PiNkYpeach.Models.Dtos
         public decimal TotalPrice { get; set; }
         public int Qty { get; set; }
     }
+}
