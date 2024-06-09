@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PiNkYpeach.Data.Entities;
+using PiNkYpeach.Api.Entities;
 
-namespace PiNkYpeach.Data
+namespace PiNkYpeach.Api
 {
     public class ApplicationContext : DbContext
     {

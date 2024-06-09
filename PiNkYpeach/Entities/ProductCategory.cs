@@ -1,4 +1,4 @@
-﻿namespace PiNkYpeach.Data.Entities
+﻿namespace PiNkYpeach.Api.Entities
 {
     public class ProductCategory
     {
