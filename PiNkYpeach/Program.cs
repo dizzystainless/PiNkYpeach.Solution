@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using MudBlazor.Services;
 using Microsoft.EntityFrameworkCore;
-using PiNkYpeach.Data;
+using PiNkYpeach.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 

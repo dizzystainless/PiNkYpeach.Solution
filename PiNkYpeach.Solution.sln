@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PiNkYpeach.Data", "PiNkYpeach\PiNkYpeach.Data.csproj", "{DA77B504-AAE4-4CB2-ABC0-0E1452F917AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PiNkYpeach.Api", "PiNkYpeach\PiNkYpeach.Api.csproj", "{DA77B504-AAE4-4CB2-ABC0-0E1452F917AE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PiNkYpeach.Models", "PiNkYpeach.Models\PiNkYpeach.Models.csproj", "{4F50F15B-E1BD-47A9-902C-24C1A90F7E2E}"
 EndProject
