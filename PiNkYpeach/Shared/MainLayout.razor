@@ -1,9 +1,12 @@
 ﻿@using MudBlazor
 @inherits LayoutComponentBase
 
-<MudThemeProvider />
+@* <MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme" /> *@
+@* <MudSwitch @bind-Checked="@_isDarkMode" Color="Color.Primary" Class="ma-4" T="bool" Label="Toggle Light/Dark Mode" /> *@
 <MudDialogProvider />
 <MudSnackbarProvider />
+
+
 <PageTitle>PiNkYpeach</PageTitle>
 
 <div class="page">
@@ -21,3 +24,8 @@
         </article>
     </main>
 </div>
+
+@code {
+    // private MudTheme _theme = new();
+    // private bool _isDarkMode;
+}
