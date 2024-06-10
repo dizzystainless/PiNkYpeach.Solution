@@ -1,4 +1,4 @@
-﻿namespace PiNkYpeach.Api.Entities
+﻿namespace PiNkYpeach.Api.Data.Entities
 {
     public class User
     {
