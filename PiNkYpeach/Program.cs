@@ -4,19 +4,21 @@ using MudBlazor.Services;
 using Microsoft.EntityFrameworkCore;
 using PiNkYpeach.Api;
 using PiNkYpeach.Api.Data;
+using PiNkYpeach.Api.Services;
+using PiNkYpeach.Api.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-//builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
 
 builder.Services.AddDbContextFactory<ApplicationContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("PinkypeachDatabase")), ServiceLifetime.Scoped);
 
 builder.Services.AddMudServices();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 var app = builder.Build();
 
