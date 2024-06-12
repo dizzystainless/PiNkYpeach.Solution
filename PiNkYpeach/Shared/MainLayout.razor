@@ -1,11 +1,29 @@
 ﻿@using MudBlazor
 @inherits LayoutComponentBase
 
-@* <MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="_theme" /> *@
-@* <MudSwitch @bind-Checked="@_isDarkMode" Color="Color.Primary" Class="ma-4" T="bool" Label="Toggle Light/Dark Mode" /> *@
+<MudThemeProvider @bind-IsDarkMode="@_isDarkMode" Theme="PinkTheme" />
+
+
+
 <MudDialogProvider />
 <MudSnackbarProvider />
 
+<MudLayout>
+    <MudAppBar>
+        @* <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" /> *@
+        PiNkYpeach
+        <MudToggleIconButton @bind-Toggled="@_isDarkMode"
+                             Icon="@Icons.Material.Filled.DarkMode" Color="@Color.Default"
+                             ToggledIcon="@Icons.Material.Filled.WbSunny" ToggledColor="@Color.Default" />
+    </MudAppBar>
+   
+      @* <MudDrawer @bind-Open="@_drawerOpen">
+        <MyNavMenu/>
+    </MudDrawer> *@
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
 
 <PageTitle>PiNkYpeach</PageTitle>
 
@@ -15,10 +33,6 @@
     </div>
 
     <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
-
         <article class="content px-4">
             @Body
         </article>
@@ -26,6 +40,34 @@
 </div>
 
 @code {
-    // private MudTheme _theme = new();
-    // private bool _isDarkMode;
+    // bool _drawerOpen = true;
+
+    // void DrawerToggle()
+    // {
+    //     _drawerOpen = !_drawerOpen;
+    // }
+
+    private bool _isDarkMode;
+
+    MudTheme PinkTheme = new MudTheme()
+        {
+            Palette = new PaletteLight()
+            {
+                Primary = Colors.Pink.Darken2,
+                Secondary = Colors.Pink.Accent4,
+                AppbarBackground = Colors.Pink.Darken3,
+                Background = Colors.Pink.Lighten4,
+
+                //Define other properties here.
+            },
+            PaletteDark = new PaletteDark()
+            {
+                Primary = Colors.Purple.Darken2,
+                Secondary = Colors.Purple.Accent4,
+                AppbarBackground = Colors.Purple.Darken3,
+                Background = Colors.Purple.Lighten4,
+                //Define other properties here.
+            }
+
+        };
 }
