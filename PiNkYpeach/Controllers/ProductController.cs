@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PiNkYpeach.Api.Extensions;
 using PiNkYpeach.Api.Services.Interfaces;
 using PiNkYpeach.Models.Dtos;
 
@@ -16,28 +17,31 @@ namespace PiNkYpeach.Api.Controllers
 
         }
 
-        //[HttpGet]
-        //public async Task<ActionResult<IEnumerable<ProductDto>>> GetItems()
-        //{
-        //    try
-        //    {
-        //        var products = await _productService.GetItems();
-        //        var productCategories = await _productService.GetCategories();
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<ProductDto>>> GetItems()
+        {
+            try
+            {
+                var products = await _productService.GetItems();
+                var productCategories = await _productService.GetCategories();
 
-        //        if(products == null  || productCategories == null)
-        //        {
-        //            return NotFound();
-        //        }
-        //        else
-        //        {
+                if (products == null || productCategories == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    var productDtos = products.ConvertToDto(productCategories);
+                    return Ok(productDtos);
 
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
+                }
+            }
+            catch (Exception)
+            {
 
-        //        throw;
-        //    }
-        //}
+                return StatusCode(StatusCodes.Status500InternalServerError,
+                                 "Error retrieving data from the database :(");
+            }
+        }
     }
 }
